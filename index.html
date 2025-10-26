@@ -59,6 +59,12 @@
             font-size: 2.5rem;
             color: var(--primary-orange);
         }
+        .logo-icon img {
+    width: 60px;        /* adjust as needed */
+    height: auto;
+    border-radius: 10px; /* optional – makes it look smooth */
+    margin-right: 10px;
+}
 
         .logo-text h1 {
             font-size: 1.5rem;
@@ -608,6 +614,13 @@
             background: var(--primary-orange);
         }
 
+        .why-choose1{
+              color: #fff; /* makes the main heading white */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -711,6 +724,31 @@
                 min-height: 500px;
             }
         }
+
+
+
+
+        .close-menu-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+nav.active .close-menu-btn {
+    display: block;
+}
+
+.section-header p {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+
     </style>
 </head>
 <body>
@@ -719,7 +757,8 @@
         <div class="header-container">
             <div class="logo">
                 <div class="logo-icon">
-                    <i class="fas fa-building"></i>
+                    <!-- <i class="fas fa-building"></i> -->
+                     <img src="logo1.jpg" alt="ArchiNext INFRA Logo" class="logo-img">
                 </div>
                 <div class="logo-text">
                     <h1>ArchiNext INFRA</h1>
@@ -730,6 +769,9 @@
                 <i class="fas fa-bars"></i>
             </button>
             <nav id="mainNav">
+                    <button class="close-menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-times"></i>
+    </button>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
@@ -809,7 +851,7 @@
     <section class="services-section" id="services">
         <div class="section-header">
             <h2>Our Services</h2>
-            <p>Complete Package – From Drawings to Delivery</p>
+            <p>Complete Package - From Drawings to Delivery</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
@@ -918,8 +960,8 @@
     <!-- Why Choose Us Section -->
     <section class="why-choose-section" id="why-choose">
         <div class="section-header">
-            <h2>Why Choose Us?</h2>
-            <p>Commitment to Quality & Cost Efficiency</p>
+            <h2 class="why-choose1" style="color: #fff;">Why Choose Us?</h2>
+            <p style="color: aqua;">Commitment to Quality & Cost Efficiency</p>
         </div>
         <div class="features-grid">
             <div class="feature-card">
